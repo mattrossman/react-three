@@ -13,7 +13,9 @@ interface State {
 	}
 }
 
-// Click and drag to move the camera
+/**
+ * Click and drag to rotate the default camera.
+ */
 export function LookControls() {
   const { gl, camera } = useThree()
 	useEffect(() => {
