@@ -31,13 +31,6 @@
 			"pre-commit": "tsdx lint"
 		}
 	},
-	"prettier": {
-		"printWidth": 80,
-		"semi": true,
-		"singleQuote": true,
-		"trailingComma": "es5",
-		"useTabs": true
-	},
 	"module": "dist/react-three.esm.js",
 	"size-limit": [
 		{
