@@ -7,7 +7,7 @@ import { Setup } from './shared/Setup';
 import { WasdControls } from '../src';
 
 export default {
-  title: 'WasdControls',
+  title: 'Components/WasdControls',
   component: WasdControls,
   decorators: [(Story) => <Setup><Story /></Setup>]
 } as Meta

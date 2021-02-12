@@ -7,7 +7,7 @@ import { Setup } from './shared/Setup';
 import { LookControls } from '../src';
 
 export default {
-  title: 'LookControls',
+  title: 'Components/LookControls',
   component: LookControls,
   decorators: [(Story) => <Setup><Story /></Setup>]
 } as Meta
