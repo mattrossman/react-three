@@ -55,6 +55,6 @@ export function LookControls() {
 			gl.domElement.removeEventListener('pointerdown', onPointerDown)
 			gl.domElement.removeEventListener('pointerup', onPointerUp)
 		}
-	})
+	}, [gl, camera])
 	return null
 }
