@@ -1,7 +1,7 @@
 {
 	"name": "@mattrossman/react-three",
 	"author": "mattrossman",
-	"version": "0.1.0",
+	"version": "0.2.0",
 	"license": "MIT",
 	"main": "dist/index.js",
 	"typings": "dist/index.d.ts",
@@ -20,8 +20,8 @@
 		"prepare": "tsdx build",
 		"size": "size-limit",
 		"analyze": "size-limit --why",
-		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook -s public -o public"
+		"storybook": "start-storybook -p 6006 --docs",
+		"build-storybook": "build-storybook -s public -o public --docs"
 	},
 	"peerDependencies": {
 		"react": ">=16"
@@ -44,6 +44,7 @@
 	],
 	"devDependencies": {
 		"@babel/core": "^7.12.13",
+		"@react-three/drei": "^3.6.0",
 		"@size-limit/preset-small-lib": "^4.9.2",
 		"@storybook/addon-essentials": "^6.1.17",
 		"@storybook/addon-info": "^5.3.21",

@@ -28,8 +28,8 @@ const useCodes = () => {
 }
 
 /**
- * Control the default camera position with WASD keys.
- * Rotation logic from [`PointerLockControls`](three/examples/jsm/controls/PointerLockControls.js)
+ * Control the default camera position with WASD keys, run with left shift.
+ * Rotation logic from [`PointerLockControls`](https://github.com/mrdoob/three.js/blob/master/examples/jsm/controls/PointerLockControls.js)
  */
 export function WasdControls() {
 	const { camera } = useThree()
