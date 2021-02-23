@@ -1351,6 +1351,13 @@
     utility-types "^3.10.0"
     zustand "^3.0.3"
 
+"@react-three/xr@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@react-three/xr/-/xr-2.0.0.tgz#8305fff849abe6fd9ff18c0193cdc286ba4131fe"
+  integrity sha512-Kpi014UrhXdE+7i4zsaUx1X+Cn4I6p4s99xTc9IoslvMlZW1YTC0U/km4k66lAMVljEPhGI5DHsZTrugZ5bCqg==
+  dependencies:
+    react-merge-refs "^1.1.0"
+
 "@rollup/plugin-alias@^3.1.1":
   version "3.1.2"
   resolved "https://registry.yarnpkg.com/@rollup/plugin-alias/-/plugin-alias-3.1.2.tgz#c585b05be4a7782d269c69d13def56f44e417772"
@@ -2120,6 +2127,13 @@
     "@types/react" "*"
     "@types/reactcss" "*"
 
+"@types/react-dom@^17.0.1":
+  version "17.0.1"
+  resolved "https://registry.yarnpkg.com/@types/react-dom/-/react-dom-17.0.1.tgz#d92d77d020bfb083e07cc8e0ac9f933599a4d56a"
+  integrity sha512-yIVyopxQb8IDZ7SOHeTovurFq+fXiPICa+GV3gp0Xedsl+MwQlMLKmvrnEjFbQxjliH5YVAEWFh975eVNmKj7Q==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-syntax-highlighter@11.0.4":
   version "11.0.4"
   resolved "https://registry.yarnpkg.com/@types/react-syntax-highlighter/-/react-syntax-highlighter-11.0.4.tgz#d86d17697db62f98046874f62fdb3e53a0bbc4cd"
@@ -2127,7 +2141,7 @@
   dependencies:
     "@types/react" "*"
 
-"@types/react@*":
+"@types/react@*", "@types/react@^17.0.2":
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-17.0.2.tgz#3de24c4efef902dd9795a49c75f760cbe4f7a5a8"
   integrity sha512-Xt40xQsrkdvjn1EyWe1Bc0dJLcil/9x2vAuW7ya+PuQip4UYUaXyhzWmAbwRsdMgwOFHpfp7/FFZebDU6Y8VHA==
