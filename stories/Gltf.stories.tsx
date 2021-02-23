@@ -2,7 +2,7 @@ import React from 'react'
 import { Meta } from '@storybook/react'
 
 import { Setup } from './shared/Setup'
-import { Gltf } from '../src'
+import { Gltf } from '../src/core'
 import { OrbitControls } from '@react-three/drei'
 
 const duckGlb =

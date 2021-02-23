@@ -4,7 +4,7 @@ import { useThree } from 'react-three-fiber'
 import { PerspectiveCamera } from 'three'
 
 import { Setup } from './shared/Setup'
-import { WasdControls } from '../src'
+import { WasdControls } from '../src/core'
 
 export default {
 	title: 'Components/WasdControls',

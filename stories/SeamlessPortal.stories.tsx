@@ -5,7 +5,7 @@ import { useFrame } from 'react-three-fiber'
 import { Object3D } from 'three'
 
 import { Setup } from './shared/Setup'
-import { SeamlessPortal } from '../src'
+import { SeamlessPortal } from '../src/core'
 
 export default {
 	title: 'Components/SeamlessPortal',

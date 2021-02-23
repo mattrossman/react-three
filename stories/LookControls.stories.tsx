@@ -4,12 +4,12 @@ import { useThree } from 'react-three-fiber';
 import { PerspectiveCamera } from 'three';
 
 import { Setup } from './shared/Setup';
-import { LookControls } from '../src';
+import { LookControls } from '../src/core';
 
 export default {
-  title: 'Components/LookControls',
-  component: LookControls,
-  decorators: [(Story) => <Setup><Story /></Setup>]
+	title: 'Components/LookControls',
+	component: LookControls,
+	decorators: [(Story) => <Setup><Story /></Setup>]
 } as Meta
 
 export const Default = () => {
