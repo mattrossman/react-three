@@ -1,38 +1,32 @@
 {
-	"name": "@mattrossman/react-three",
+	"name": "r3f-esbuild",
 	"version": "0.2.0",
-	"main": "dist/core.js",
+	"author": "mattrossman",
 	"license": "MIT",
 	"scripts": {
-		"build": "microbundle build src/*.ts --jsx React.createElement",
-		"storybook": "start-storybook -p 6006 --docs",
-		"build-storybook": "build-storybook --docs -s public -o public"
+		"build": "node scripts/build.js && yarn tsc",
+		"dev": "node scripts/dev.js"
 	},
+	"files": [
+		"dist"
+	],
 	"exports": {
-		".": "./dist/core.modern.js",
-		"./xr": "./dist/xr.modern.js"
-	},
-	"peerDependencies": {
-		"react": ">=16",
-		"react-three-fiber": ">=5",
-		"three": "^0.125.2"
+		".": "./dist/core.js",
+		"./xr": "./dist/xr.js"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.13.1",
-		"@storybook/addon-actions": "^6.1.19",
-		"@storybook/addon-essentials": "^6.1.19",
-		"@storybook/addon-links": "^6.1.19",
-		"@storybook/react": "^6.1.19",
-		"babel-loader": "^8.2.2",
-		"microbundle": "^0.13.0",
-		"react": "^17.0.1",
-		"react-dom": "^17.0.1",
-		"typescript": "^4.1.5"
-	},
-	"dependencies": {
 		"@react-three/drei": "^3.8.6",
 		"@react-three/xr": "^2.0.0",
-		"react-three-fiber": "^5.3.18",
-		"three": "^0.125.2"
+		"@types/react": "^17.0.2",
+		"@types/react-dom": "^17.0.1",
+		"@types/three": "^0.125.3",
+		"@vitejs/plugin-react-refresh": "^1.1.0",
+		"esbuild": "^0.8.51",
+		"react": "^17.0.1",
+		"react-dom": "^17.0.1",
+		"react-three-fiber": "^5.3.19",
+		"three": "^0.125.0",
+		"typescript": "^4.2.2",
+		"vite": "^2.0.1"
 	}
 }
