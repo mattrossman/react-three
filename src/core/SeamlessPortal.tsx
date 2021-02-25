@@ -1,10 +1,10 @@
-import React, { ReactNode, useLayoutEffect, useRef, useState } from 'react'
+import * as React from 'react'
 import { createPortal } from 'react-three-fiber'
 import { Group, Matrix4, Object3D } from 'three'
 
 type Props = {
 	container?: Object3D
-	children?: ReactNode
+	children?: React.ReactNode
 }
 
 interface State {
@@ -17,13 +17,13 @@ interface State {
  * @param container Parent object
  */
 export function SeamlessPortal({ container, children }: Props) {
-	const defaultContainer = useRef()
-	const portalChild = useRef<Group>()
-	const [{ activeContainer, matrix }, setState] = useState<State>(() => ({
+	const defaultContainer = React.useRef()
+	const portalChild = React.useRef<Group>()
+	const [{ activeContainer, matrix }, setState] = React.useState<State>(() => ({
 		activeContainer: undefined,
 		matrix: new Matrix4(),
 	}))
-	useLayoutEffect(() => {
+	React.useLayoutEffect(() => {
 		const newContainer = container ?? defaultContainer.current
 		if (portalChild.current && newContainer) {
 			matrix.copy(newContainer.matrixWorld).invert()

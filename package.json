@@ -1,68 +1,33 @@
 {
 	"name": "@mattrossman/react-three",
-	"author": "mattrossman",
 	"version": "0.2.0",
+	"author": "mattrossman",
 	"license": "MIT",
-	"main": "dist/index.js",
-	"typings": "dist/index.d.ts",
-	"files": [
-		"dist",
-		"src"
-	],
-	"engines": {
-		"node": ">=10"
-	},
 	"scripts": {
-		"start": "tsdx watch",
-		"build": "tsdx build",
-		"test": "tsdx test --passWithNoTests",
-		"lint": "tsdx lint",
-		"prepare": "tsdx build",
-		"size": "size-limit",
-		"analyze": "size-limit --why",
-		"storybook": "start-storybook -p 6006 --docs",
-		"build-storybook": "build-storybook -s public -o public --docs"
+		"build": "node scripts/build.js && yarn tsc",
+		"dev": "node scripts/dev.js",
+		"build-examples": "yarn build && node scripts/build-examples.js"
 	},
-	"peerDependencies": {
-		"react": ">=16"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "tsdx lint"
-		}
-	},
-	"module": "dist/react-three.esm.js",
-	"size-limit": [
-		{
-			"path": "dist/react-three.cjs.production.min.js",
-			"limit": "10 KB"
-		},
-		{
-			"path": "dist/react-three.esm.js",
-			"limit": "10 KB"
-		}
+	"files": [
+		"dist"
 	],
+	"exports": {
+		".": "./dist/core.js",
+		"./xr": "./dist/xr.js"
+	},
 	"devDependencies": {
-		"@babel/core": "^7.12.13",
-		"@react-three/drei": "^3.6.0",
-		"@size-limit/preset-small-lib": "^4.9.2",
-		"@storybook/addon-essentials": "^6.1.17",
-		"@storybook/addon-info": "^5.3.21",
-		"@storybook/addon-links": "^6.1.17",
-		"@storybook/addons": "^6.1.17",
-		"@storybook/react": "^6.1.17",
-		"@types/react": "^17.0.1",
-		"@types/react-dom": "^17.0.0",
-		"babel-loader": "^8.2.2",
-		"husky": "^5.0.9",
+		"@react-three/drei": "^3.8.6",
+		"@react-three/xr": "^2.0.0",
+		"@types/react": "^17.0.2",
+		"@types/react-dom": "^17.0.1",
+		"@types/three": "^0.125.3",
+		"@vitejs/plugin-react-refresh": "^1.1.0",
+		"esbuild": "^0.8.51",
 		"react": "^17.0.1",
 		"react-dom": "^17.0.1",
-		"react-is": "^17.0.1",
-		"react-three-fiber": "^5.3.18",
-		"size-limit": "^4.9.2",
-		"three": "^0.125.2",
-		"tsdx": "^0.14.1",
-		"tslib": "^2.1.0",
-		"typescript": "^4.1.5"
+		"react-three-fiber": "^5.3.19",
+		"three": "^0.125.0",
+		"typescript": "^4.2.2",
+		"vite": "^2.0.1"
 	}
 }

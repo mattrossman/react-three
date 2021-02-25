@@ -1,4 +1,4 @@
-import React, { forwardRef, Suspense } from 'react'
+import * as React from 'react'
 import { useGLTF } from '@react-three/drei'
 
 type Props = JSX.IntrinsicElements['group'] & {
@@ -9,15 +9,15 @@ type Props = JSX.IntrinsicElements['group'] & {
  * Display a complete glTF model, fallback to null
  * @param path Source URL for the model
  */
-export const Gltf = forwardRef((props: Props, ref) => {
+export const Gltf = React.forwardRef((props: Props, ref) => {
 	return (
-		<Suspense fallback={null}>
+		<React.Suspense fallback={null}>
 			<InnerGltf ref={ref} {...props} />
-		</Suspense>
+		</React.Suspense>
 	)
 })
 
-const InnerGltf = forwardRef(({ path = '', ...props }: Props, ref) => {
+const InnerGltf = React.forwardRef(({ path = '', ...props }: Props, ref) => {
 	const { scene } = useGLTF(path)
 	return <primitive ref={ref} object={scene} {...props} />
 })
