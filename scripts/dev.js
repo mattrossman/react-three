@@ -1,6 +1,6 @@
 const path = require('path')
 const esbuild = require('esbuild')
-const { createServer } = require('vite')
+const vite = require('vite')
 const sharedConfig = require('./sharedConfig')
 
 async function dev() {
@@ -13,7 +13,7 @@ async function dev() {
 	})
 
 	// Start Vite dev server from examples folder
-	const server = await createServer({
+	const server = await vite.createServer({
 		root: path.join(__dirname, '../examples'),
 		server: {
 			port: 1234,
