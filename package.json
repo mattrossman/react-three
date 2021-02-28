@@ -1,8 +1,18 @@
 {
 	"name": "@mattrossman/react-three",
-	"version": "0.3.0",
+	"version": "0.4.0",
 	"author": "mattrossman",
 	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mattrossman/react-three"
+	},
+	"keywords": [
+		"react",
+		"three",
+		"react-three-fiber",
+		"react-xr"
+	],
 	"scripts": {
 		"build": "node scripts/build.js && yarn tsc",
 		"dev": "node scripts/dev.js",
@@ -11,6 +21,8 @@
 	"files": [
 		"dist"
 	],
+	"module": "./dist/core.js",
+	"types": "./dist/core.d.ts",
 	"exports": {
 		".": "./dist/core.js",
 		"./xr": "./dist/xr.js"
