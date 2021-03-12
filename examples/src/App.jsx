@@ -3,10 +3,9 @@ import { HashRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import Controls from './routes/Controls'
 import XR from './routes/XR'
 
-const scenes = [Controls, XR]
+const routes = { Controls, XR }
 
 export default function App() {
-	window.scenes = scenes
 	return (
 		<Router>
 			<Switch>
@@ -17,24 +16,23 @@ export default function App() {
 								@mattrossman/react-three
 							</h1>
 							<h1 tw="text-3xl font-bold underline my-6">Examples</h1>
-							{scenes.map((Scene, i) => (
+							{Object.keys(routes).map((name, i) => (
 								<Link
 									key={i}
-									to={'/' + Scene.name.toLowerCase()}
+									to={'/' + name.toLowerCase()}
 									tw="underline border bg-white bg-opacity-0 hover:bg-opacity-20 font-semibold mr-4 mb-4 px-2 py-1 rounded-lg"
 								>
-									{Scene.name}
+									{name}
 								</Link>
 							))}
 						</div>
 					</div>
 				</Route>
-				<Route path="/controls">
-					<Controls />
-				</Route>
-				<Route path="/xr">
-					<XR />
-				</Route>
+				{Object.entries(routes).map(([name, Component], i) => (
+					<Route key={i} path={'/' + name.toLowerCase()}>
+						<Component />
+					</Route>
+				))}
 			</Switch>
 		</Router>
 	)
