@@ -19,7 +19,7 @@ export function SmoothLocomotion({ hand = 'left', speed = 1 }: Props) {
 	const { player } = useXR()
 	const controller = useController(hand)
 	useFrame((_, delta) => {
-		if (controller?.inputSource?.gamepad) {
+		if (controller?.inputSource?.gamepad?.axes?.length > 0) {
 			const [, , ax, ay] = controller.inputSource.gamepad.axes
 			joystickDir.set(ax, ay)
 			controller.controller.getWorldDirection(controllerDir3)

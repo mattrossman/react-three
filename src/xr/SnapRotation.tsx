@@ -24,7 +24,7 @@ export function SnapRotation({
 	const { player } = useXR()
 	const snapping = useRef(false)
 	useFrame(() => {
-		if (controller?.inputSource?.gamepad) {
+		if (controller?.inputSource?.gamepad?.axes?.length > 0) {
 			const [, , ax] = controller.inputSource.gamepad.axes
 			if (Math.abs(ax) > threshold) {
 				!snapping.current && player.rotateY(-increment * Math.sign(ax))
